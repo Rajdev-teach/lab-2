@@ -1,0 +1,14 @@
+2026-08-20 10:50:11.356 UTC [14620] LOG:  starting PostgreSQL 16.14 (Ubuntu 16.14-0ubuntu0.24.04.1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, 64-bit
+2026-08-20 10:50:11.356 UTC [14620] LOG:  listening on IPv6 address "::1", port 5433
+2026-08-20 10:50:11.356 UTC [14620] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-08-20 10:50:11.358 UTC [14620] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5433"
+2026-08-20 10:50:11.363 UTC [14623] LOG:  database system was shut down at 2026-08-20 10:50:03 UTC
+2026-08-20 10:50:11.369 UTC [14620] LOG:  database system is ready to accept connections
+2026-08-20 10:55:11.462 UTC [14621] LOG:  checkpoint starting: time
+2026-08-20 10:56:51.591 UTC [14621] LOG:  checkpoint complete: wrote 1001 buffers (6.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=100.087 s, sync=0.025 s, total=100.130 s; sync files=324, longest=0.002 s, average=0.001 s; distance=4752 kB, estimate=4752 kB; lsn=0/19936B0, redo lsn=0/1993678
+2026-08-20 11:00:11.684 UTC [14621] LOG:  checkpoint starting: time
+2026-08-20 11:00:12.919 UTC [14621] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.204 s, sync=0.005 s, total=1.235 s; sync files=7, longest=0.004 s, average=0.001 s; distance=73 kB, estimate=4284 kB; lsn=0/19A5CD0, redo lsn=0/19A5C98
+2026-08-20 11:05:12.013 UTC [14621] LOG:  checkpoint starting: time
+2026-08-20 11:05:13.934 UTC [14621] LOG:  checkpoint complete: wrote 20 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.907 s, sync=0.006 s, total=1.921 s; sync files=10, longest=0.004 s, average=0.001 s; distance=66 kB, estimate=3862 kB; lsn=0/19B65A8, redo lsn=0/19B6570
+2026-08-20 11:15:13.125 UTC [14621] LOG:  checkpoint starting: time
+2026-08-20 11:15:15.289 UTC [14621] LOG:  checkpoint complete: wrote 22 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.122 s, sync=0.019 s, total=2.165 s; sync files=12, longest=0.017 s, average=0.002 s; distance=108 kB, estimate=3487 kB; lsn=0/19D1910, redo lsn=0/19D18D8
