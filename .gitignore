@@ -1,0 +1,22 @@
+# Secrets
+.env
+standalone_admin_password.txt
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# PostgreSQL
+.pgdata/
+
+# Airflow local files
+airflow.db
+airflow.cfg
+airflow-webserver.pid
+webserver_config.py
+logs/
+
+# OS/editor
+.DS_Store
+.vscode/

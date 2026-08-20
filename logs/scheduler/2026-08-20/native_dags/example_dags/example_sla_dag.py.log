@@ -118,3 +118,46 @@
 [2026-08-20T11:14:13.393+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:14:13.392+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-08-20T11:14:13.434+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:14:13.433+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2026-08-20 11:12:00+00:00, run_after=2026-08-20 11:14:00+00:00
 [2026-08-20T11:14:13.457+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py took 0.113 seconds
+[2026-08-20T11:16:50.180+0000] {processor.py:186} INFO - Started process (PID=39713) to work on /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2026-08-20T11:16:50.182+0000] {processor.py:914} INFO - Processing file /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py for tasks to queue
+[2026-08-20T11:16:50.188+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:50.188+0000] {dagbag.py:588} INFO - Filling up the DagBag from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2026-08-20T11:16:50.204+0000] {processor.py:925} INFO - DAG(s) 'example_sla_dag' retrieved from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2026-08-20T11:16:50.208+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:50.208+0000] {dagbag.py:588} INFO - Filling up the DagBag from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py
+[2026-08-20T11:16:50.242+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:50.241+0000] {processor.py:457} INFO - Running SLA Checks for example_sla_dag
+[2026-08-20T11:16:50.318+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:50.318+0000] {processor.py:555} INFO - Calling SLA miss callback <function sla_callback at 0x739302925080>
+[2026-08-20T11:16:50.319+0000] {logging_mixin.py:190} INFO - The callback arguments are:  {'dag': <DAG: example_sla_dag>, 'task_list': 'sleep_20 on 2026-08-20T11:16:00+00:00', 'blocking_task_list': '', 'slas': [('example_sla_dag', 'sleep_20', '2026-08-20T11:16:00+00:00')], 'blocking_tis': []}
+[2026-08-20T11:16:50.328+0000] {logging_mixin.py:190} WARNING - /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/utils/email.py:155 RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+[2026-08-20T11:16:50.328+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:50.328+0000] {configuration.py:1058} WARNING - section/key [smtp/smtp_user] not found in config
+[2026-08-20T11:16:50.329+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:50.329+0000] {email.py:272} INFO - Email alerting: attempt 1
+[2026-08-20T11:16:50.343+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:50.329+0000] {processor.py:606} ERROR - Could not send SLA Miss email notification for DAG example_sla_dag
+Traceback (most recent call last):
+  File "/workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/dag_processing/processor.py", line 601, in manage_slas
+    send_email(emails, f"[airflow] SLA miss on DAG={dag.dag_id}", email_content)
+  File "/workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/utils/email.py", line 80, in send_email
+    return backend(
+           ^^^^^^^^
+  File "/workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/utils/email.py", line 155, in send_email_smtp
+    send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+  File "/workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/utils/email.py", line 274, in send_mime_email
+    smtp_conn = _get_smtp_connection(smtp_host, smtp_port, smtp_timeout, smtp_ssl)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/utils/email.py", line 318, in _get_smtp_connection
+    return smtplib.SMTP(host=host, port=port, timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.python/current/lib/python3.12/smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.python/current/lib/python3.12/smtplib.py", line 341, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.python/current/lib/python3.12/smtplib.py", line 312, in _get_socket
+    return socket.create_connection((host, port), timeout,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.python/current/lib/python3.12/socket.py", line 852, in create_connection
+    raise exceptions[0]
+  File "/home/codespace/.python/current/lib/python3.12/socket.py", line 837, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+[2026-08-20T11:16:50.667+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:50.665+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-08-20T11:16:50.689+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:50.689+0000] {dag.py:4180} INFO - Setting next_dagrun for example_sla_dag to 2026-08-20 11:16:00+00:00, run_after=2026-08-20 11:18:00+00:00
+[2026-08-20T11:16:50.794+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_sla_dag.py took 0.637 seconds

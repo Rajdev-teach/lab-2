@@ -142,3 +142,11 @@
 [2026-08-20T11:14:08.261+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:14:08.261+0000] {dag.py:4180} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
 [2026-08-20T11:14:08.264+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:14:08.263+0000] {dag.py:4180} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
 [2026-08-20T11:14:08.284+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py took 0.091 seconds
+[2026-08-20T11:16:38.542+0000] {processor.py:186} INFO - Started process (PID=39456) to work on /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py
+[2026-08-20T11:16:38.543+0000] {processor.py:914} INFO - Processing file /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2026-08-20T11:16:38.547+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:38.546+0000] {dagbag.py:588} INFO - Filling up the DagBag from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py
+[2026-08-20T11:16:38.562+0000] {processor.py:925} INFO - DAG(s) 'example_xcom_args_with_operators', 'example_xcom_args' retrieved from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py
+[2026-08-20T11:16:38.746+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:38.746+0000] {dag.py:3239} INFO - Sync 2 DAGs
+[2026-08-20T11:16:38.765+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:38.764+0000] {dag.py:4180} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2026-08-20T11:16:38.772+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:16:38.772+0000] {dag.py:4180} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2026-08-20T11:16:38.963+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_xcomargs.py took 0.430 seconds

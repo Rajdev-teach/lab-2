@@ -126,3 +126,11 @@
 [2026-08-20T11:14:48.822+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:14:48.822+0000] {dag.py:4180} INFO - Setting next_dagrun for example_external_task_marker_child to None, run_after=None
 [2026-08-20T11:14:48.826+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:14:48.826+0000] {dag.py:4180} INFO - Setting next_dagrun for example_external_task_marker_parent to None, run_after=None
 [2026-08-20T11:14:48.846+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_external_task_marker_dag.py took 0.083 seconds
+[2026-08-20T11:17:14.423+0000] {processor.py:186} INFO - Started process (PID=40217) to work on /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2026-08-20T11:17:14.432+0000] {processor.py:914} INFO - Processing file /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_external_task_marker_dag.py for tasks to queue
+[2026-08-20T11:17:14.441+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:14.440+0000] {dagbag.py:588} INFO - Filling up the DagBag from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2026-08-20T11:17:14.486+0000] {processor.py:925} INFO - DAG(s) 'example_external_task_marker_child', 'example_external_task_marker_parent' retrieved from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_external_task_marker_dag.py
+[2026-08-20T11:17:14.975+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:14.973+0000] {dag.py:3239} INFO - Sync 2 DAGs
+[2026-08-20T11:17:15.040+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:15.040+0000] {dag.py:4180} INFO - Setting next_dagrun for example_external_task_marker_child to None, run_after=None
+[2026-08-20T11:17:15.058+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:15.056+0000] {dag.py:4180} INFO - Setting next_dagrun for example_external_task_marker_parent to None, run_after=None
+[2026-08-20T11:17:15.371+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_external_task_marker_dag.py took 0.978 seconds

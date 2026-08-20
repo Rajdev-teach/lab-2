@@ -174,3 +174,14 @@ ModuleNotFoundError: No module named 'kubernetes'
 [2026-08-20T11:14:46.154+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:14:46.154+0000] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
 [2026-08-20T11:14:46.155+0000] {processor.py:927} WARNING - No viable dags retrieved from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
 [2026-08-20T11:14:46.168+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.028 seconds
+[2026-08-20T11:17:05.856+0000] {processor.py:186} INFO - Started process (PID=40077) to work on /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2026-08-20T11:17:05.865+0000] {processor.py:914} INFO - Processing file /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py for tasks to queue
+[2026-08-20T11:17:05.878+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:05.873+0000] {dagbag.py:588} INFO - Filling up the DagBag from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2026-08-20T11:17:05.896+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:05.887+0000] {example_local_kubernetes_executor.py:40} WARNING - Could not import DAGs in example_local_kubernetes_executor.py
+Traceback (most recent call last):
+  File "/workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[2026-08-20T11:17:05.897+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:05.897+0000] {example_local_kubernetes_executor.py:41} WARNING - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes]
+[2026-08-20T11:17:05.897+0000] {processor.py:927} WARNING - No viable dags retrieved from /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py
+[2026-08-20T11:17:05.945+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/example_dags/example_local_kubernetes_executor.py took 0.119 seconds
