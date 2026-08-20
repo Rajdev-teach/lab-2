@@ -375,3 +375,19 @@ ModuleNotFoundError: No module named 'pipeline'
 [2026-08-20T11:17:26.283+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:26.278+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-08-20T11:17:26.346+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:26.341+0000] {dag.py:4180} INFO - Setting next_dagrun for etl_ingestion_pipeline to 2026-08-20 00:00:00+00:00, run_after=2026-08-21 00:00:00+00:00
 [2026-08-20T11:17:26.411+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/dags/etl_ingestion_dag.py took 1.289 seconds
+[2026-08-20T11:17:51.843+0000] {processor.py:186} INFO - Started process (PID=41673) to work on /workspaces/lab-2/dags/etl_ingestion_dag.py
+[2026-08-20T11:17:51.846+0000] {processor.py:914} INFO - Processing file /workspaces/lab-2/dags/etl_ingestion_dag.py for tasks to queue
+[2026-08-20T11:17:51.855+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:51.850+0000] {dagbag.py:588} INFO - Filling up the DagBag from /workspaces/lab-2/dags/etl_ingestion_dag.py
+[2026-08-20T11:17:51.870+0000] {logging_mixin.py:190} INFO - [2026-08-20T11:17:51.862+0000] {dagbag.py:387} ERROR - Failed to import: /workspaces/lab-2/dags/etl_ingestion_dag.py
+Traceback (most recent call last):
+  File "/workspaces/lab-2/.venv/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 994, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/workspaces/lab-2/dags/etl_ingestion_dag.py", line 4, in <module>
+    from dag_utils import (
+  File "/workspaces/lab-2/dags/dag_utils.py", line 1, in <module>
+    from pipeline.extractors.csv_extractor import extract_csv
+ModuleNotFoundError: No module named 'pipeline'
+[2026-08-20T11:17:51.871+0000] {processor.py:927} WARNING - No viable dags retrieved from /workspaces/lab-2/dags/etl_ingestion_dag.py
+[2026-08-20T11:17:51.956+0000] {processor.py:208} INFO - Processing /workspaces/lab-2/dags/etl_ingestion_dag.py took 0.132 seconds
